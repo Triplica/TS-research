@@ -31,7 +31,7 @@ psi <- matrix(c(0.6,-0.3,0.1,-0.4,0.2,-0.4,0.4,0.3,0.9),3,3,byrow = T)
 Sig <- matrix(c(1,0.2,0,0.2,1,0.24,0,0.24,1),3,3,byrow = T)
 rt <- rep(0,3)
 pt = qt = rep(0,1000)
-set.seed(413)
+set.seed(613)
 for (i in 1:1000){
   rt = psi%*%rt+mvrnorm(1,rep(0,3),Sig)
   pt[i] <- sum(c(1/sqrt(6),2/sqrt(6),1/sqrt(6))*rt)
